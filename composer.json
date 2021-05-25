@@ -29,9 +29,13 @@
         "branch-alias": {
             "dev-master": "1.0-dev"
         },
-        "laravel": {
+       "laravel": {
+            "dont-discover": [
+                "laravel/sanctum",
+            ],
             "providers": [
-                "Kilip\\SanctumORM\\SanctumORMServiceProvider"
+                "Laravel\\Sanctum\\SanctumServiceProvider",
+                "Kilip\\SanctumORM\\SanctumORMServiceProvider",
             ]
         }
     },
