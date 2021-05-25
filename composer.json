@@ -31,11 +31,11 @@
         },
        "laravel": {
             "dont-discover": [
-                "laravel/sanctum",
+                "laravel/sanctum"
             ],
             "providers": [
                 "Laravel\\Sanctum\\SanctumServiceProvider",
-                "Kilip\\SanctumORM\\SanctumORMServiceProvider",
+                "Kilip\\SanctumORM\\SanctumORMServiceProvider"
             ]
         }
     },
