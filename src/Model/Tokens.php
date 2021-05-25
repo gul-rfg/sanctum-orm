@@ -65,7 +65,8 @@ abstract class Tokens implements TokenModelInterface
     protected $lastUsedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Kilip\SanctumORM\Contracts\SanctumUserInterface", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Renegade\User\Domain\Entities\User", cascade={"persist"})
+     * @ORM\JoinColumn(name="id", referencedColumnName="user_id")
      *
      * @var SanctumUserInterface|null
      */
