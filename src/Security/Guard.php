@@ -71,7 +71,7 @@ class Guard
                 : $user;
         }
 
-        if ($token = $request->bearerToken()) {
+        if ($token = $this->bearerToken()) {
             $accessToken = $manager->findToken($token);
 
             if (
@@ -120,5 +120,19 @@ class Guard
         }
 
         return $owner instanceof SanctumUserInterface;
+    }
+    
+     /**
+     * Get the bearer token from the request headers.
+     *
+     * @return string|null
+     */
+    public function bearerToken()
+    {
+        $header = request()->header('authorization', '');
+
+        if (Str::startsWith($header, 'Bearer ')) {
+            return Str::substr($header, 7);
+        }
     }
 }
