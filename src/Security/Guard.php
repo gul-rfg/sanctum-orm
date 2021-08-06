@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Kilip\SanctumORM\Contracts\SanctumUserInterface;
 use Kilip\SanctumORM\Manager\TokenManagerInterface;
+use Illuminate\Support\Str;
 
 class Guard
 {
